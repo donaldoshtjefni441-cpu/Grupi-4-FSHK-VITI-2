@@ -7,7 +7,7 @@
 ---
 
 ## 1. Përshkrimi i Projektit
-Ky projekt synon ndërtimin dhe simulimin e modelit **SIR** (Susceptible-Infected-Recovered) në një mjedis dydimensional (rrjetë $N 	imes N$). Ndryshe nga modelet klasike me përzierje homogjene, ky model fokusohet në **difuzionin lokal**, ku infektimi përhapet te fqinjët e drejtpërdrejtë, duke simuluar një përhapje më reale gjeografike të një epidemie.
+Ky projekt synon ndërtimin dhe simulimin e modelit **SIR** (Susceptible-Infected-Recovered) në një mjedis dydimensional. Ndryshe nga modelet klasike me përzierje homogjene, ky model fokusohet në **difuzionin lokal**, ku infektimi përhapet te fqinjët e drejtpërdrejtë, duke simuluar një përhapje më reale gjeografike të një epidemie.
 
 ## 2. Objektivat
 * Modelimi i gjendjeve epidemiologjike (S, I, R) në një rrjetë diskrete.
