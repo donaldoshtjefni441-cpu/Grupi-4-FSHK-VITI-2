@@ -27,7 +27,7 @@ Projekti është realizuar në Python duke përdorur libraritë `NumPy` për llo
 ## 4. Analiza e Rezultateve
 Nga simulimet e kryera :
 - **Pa Karantinë:** Infeksioni përhapet me shpejtësi në formë rrethore nga vatra qendrore, duke arritur një kulm të lartë (pik) përpara se të ulet.
-- **Me Karantinë:** Kurba e të infektuarve "shtohet" (flattening the curve), duke reduktuar ngarkesën maksimale në sistem dhe duke zgjatur kohëzgjatjen e epidemisë por me intensitet më të ulët.
+- **Me Karantinë:** Kurba e të infektuarve "shtohet" , duke reduktuar ngarkesën maksimale në sistem dhe duke zgjatur kohëzgjatjen e epidemisë por me intensitet më të ulët.
 
 ## 5. Udhëzime për Ekzekutim
 1. Sigurohuni që keni instaluar `numpy` dhe `matplotlib`.
