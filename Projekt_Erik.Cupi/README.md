@@ -1,4 +1,4 @@
-# 🌀 Lorenz & Rössler Attractors: Chaos Analysis
+#  Projekti 3 : Lorenz & Rössler Attractors: Chaos Analysis
 
 Ky projekt shqyrton sjelljen e sistemeve dinamike jolineare në hapësirën tridimensionale. Përmes simulimeve numerike, ne analizojmë se si ligje matematike deterministike prodhojnë sjellje kaotike dhe të paparashikueshme, duke vërtetuar matematikisht **"Efektin Flutur"**.
 
@@ -7,7 +7,7 @@ Ky projekt shqyrton sjelljen e sistemeve dinamike jolineare në hapësirën trid
 ## Qëllimi i Projektit
 Ndërtimi i një pakete simulimi për dy sisteme klasike kaotike (**Lorenz** dhe **Rössler**) për të krahasuar gjeometrinë e atraktorëve dhe për të matur ndjeshmërinë e tyre ndaj kushteve fillestare.
 
-## 🛠️ Hapat Metodologjikë
+##  Hapat Metodologjikë
 
 ### 1. Implementimi i Modeleve
 Kemi koduar ekuacionet diferenciale për të dy sistemet me parametra të kontrollueshëm:
