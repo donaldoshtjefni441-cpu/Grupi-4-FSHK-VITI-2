@@ -1,48 +1,55 @@
-#  Projekti 3 : Lorenz & Rössler Attractors: Chaos Analysis
-
-Ky projekt shqyrton sjelljen e sistemeve dinamike jolineare në hapësirën tridimensionale. Përmes simulimeve numerike, ne analizojmë se si ligje matematike deterministike prodhojnë sjellje kaotike dhe të paparashikueshme, duke vërtetuar matematikisht **"Efektin Flutur"**.
-
----
-
-## Qëllimi i Projektit
-Ndërtimi i një pakete simulimi për dy sisteme klasike kaotike (**Lorenz** dhe **Rössler**) për të krahasuar gjeometrinë e atraktorëve dhe për të matur ndjeshmërinë e tyre ndaj kushteve fillestare.
-
-##  Hapat Metodologjikë
-
-### 1. Implementimi i Modeleve
-Kemi koduar ekuacionet diferenciale për të dy sistemet me parametra të kontrollueshëm:
-* **Sistemi Lorenz:** - $\dot{x} = \sigma(y - x)$
-  - $\dot{y} = x(\rho - z) - y$
-  - $\dot{z} = xy - \beta z$
-* **Sistemi Rössler:** - $\dot{x} = -y - z$
-  - $\dot{y} = x + ay$
-  - $\dot{z} = b + z(x - c)$
-
-### 2. Vizualizimi 3D i Atraktorëve
-Gjenerimi i trajektoreve në hapësirën e fazave për të vëzhguar "Atraktorët e Çuditshëm". Këto struktura tregojnë se trajektorja mbetet brenda një zone të kufizuar pa u përsëritur asnjëherë (aperiodicitet).
-
-### 3. Analiza e Ndjeshmërisë (Efekti Flutur)
-Simulimi i dy kushteve fillestare me një diferencë infinitesimale prej $\delta_0 = 10^{-9}$. Përmes matjes së distancës $d(t)$, vërtetohet se gabimi rritet në mënyrë eksponenciale në kohë.
-
-### 4. Skanimi i Parametrave
-Realizimi i skanimeve për parametrat $\rho$ (te Lorenz) dhe $c$ (te Rössler) për të vëzhguar tranzicionin e sistemit nga orbita periodike në kaos të plotë.
-
-### 5. Diskutimi Kritik
-Analiza e faktit pse vizualizimi estetik 3D nuk mjafton si provë shkencore. Kaosi vërtetohet përmes **Eksponentit të Lyapunov-it** (pjerrësia e divergjencës në shkallë logaritmike).
+#  Analiza e Sistemeve Kaotike: Lorenz & Rössler
+### Studimi i Ndjeshmërisë ndaj Kushteve Fillestare (Efekti Flutur)
 
 ---
 
-##  Struktura e Projektit
-```text
-lorenz_rossler_attractors/
-├── README.md
-├── src/
-│   ├── models/
-│   │   ├── lorenz.py
-│   │   └── rossler.py
-│   ├── analysis/
-│   │   └── sensitivity.py
-│   └── visualization/
-│       └── phase3d.py
-└── scripts/
-    └── compare_sensitivity.py
+## ## 1. Përshkrimi i Projektit
+Ky projekt shqyrton sjelljen e sistemeve dinamike jolineare në hapësirën tridimensionale. Përmes modelimit të atraktorëve të Lorenz dhe Rössler, vërtetohet se në sisteme kaotike, një ndryshim mikroskopik në kushtet fillestare çon në rezultate krejtësisht të ndryshme në një kohë të shkurtër, duke e bërë parashikimin afatgjatë të pamundur.
+
+## ## 2. Objektivat
+* **Modelimi Matematik:** Implementimi i ekuacioneve diferenciale tridimensionale.
+* **Vizualizimi i Hapësirës së Fazave:** Gjenerimi i atraktorëve 3D aperiodikë.
+* **Analiza e Ndjeshmërisë:** Matja e distancës euklidiane $d(t)$ midis dy trajektoreve fqinje.
+* **Skanimi i Parametrave:** Identifikimi i kalimit nga stabiliteti në kaos përmes variimit të parametrave kontrollues ($\rho$ dhe $c$).
+
+## ## 3. Implementimi Algoritmik
+1. **Definimi i Sistemeve:** Funksionet llogarisin derivatet $(\dot{x}, \dot{y}, \dot{z})$ sipas ligjeve jolineare.
+2. **Integrimi Numerik:** Përdorimi i `scipy.integrate.odeint` (metoda Runge-Kutta) për zgjidhjen e sistemeve.
+3. **Perturbimi:** Krijimi i një trajektoreje të dytë me diferencë infinitesimale $\delta_0 = 10^{-9}$.
+4. **Kalkulimi i Distancës:** Ndjekja e divergjencës euklidiane në kohë për matjen e eksponentit të Lyapunov-it.
+
+## ## 4. Analiza e Rezultateve
+* **Gjeometria:** Atraktorët shfaqin struktura fraktale komplekse ku trajektoret nuk priten asnjëherë.
+* **Divergjenca Eksponenciale:** Grafiku logaritmik vërteton se gabimi rritet eksponencialisht, duke konfirmuar natyrën kaotike.
+* **Prova e Kaosit:** Konfirmohet se vizualizimi estetik 3D është vetëm një tregues, ndërsa prova shkencore mbetet matja numerike e divergjencës.
+
+## ## 5. Udhëzime për Ekzekutim
+1. Instalo varësitë: `pip install numpy matplotlib scipy`
+2. Hap mjedisin **Jupyter Lab**.
+3. Ekzekuto qelizat me radhë për të gjeneruar simulimet dhe grafikët krahasues.
+
+---
+
+##  Përfundime dhe Diskutim Final
+Ky projekt vërtetoi se kompleksiteti i një sistemi nuk vjen domosdoshmërisht nga numri i madh i variablave, por nga natyra jolineare e ndërveprimeve midis tyre. Përmes modelimit të sistemit **Lorenz** dhe **Rössler**, pamë se:
+1. Sistemet dinamike mund të jenë deterministike (ndjekin rregulla të sakta), por plotësisht të paparashikueshme në afatgjatë.
+2. **"Efekti Flutur"** është një fenomen matematikor i matshëm dhe jo thjesht një metaforë teorike.
+3. Analiza llogaritëse (computational) është mjeti i vetëm që na lejon të deshifrojmë strukturat e fshehura brenda kaosit.
+
+---
+
+###  Informacion mbi Autorin
+* **Punoi:** Erik Cupi  
+* **Lënda:** Modelim në Fizikë  
+* **Institucioni:** Departamenti i Fizikës  
+* **Viti Akademik:** 2026  
+
+---
+
+###  Shënime Shtesë mbi Projektin
+* **Saktësia Numerike:** Është përdorur një hap kohor $dt = 0.005$ për të garantuar saktësinë e divergjencës kundrejt zhurmës numerike.
+* **Zbatimi në Jetën Reale:** Këto modele aplikohen në parashikimin e motit, dinamikën e lëngjeve, kardiologji dhe tregjet financiare.
+* **Sfidat:** Balancimi i kohës së simulimit me rezolucionin e nevojshëm për të kapur kalimin në kaos në shkallën logaritmike.
+
+---
+*Ky projekt është pjesë e ciklit të detyrave llogaritëse për lëndën "Modelim në Fizikë".*
