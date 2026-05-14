@@ -1,7 +1,8 @@
 # Projekt 1: Model SIR Hapësinor në Rrjet, Difuzion Lokal dhe Karantinë
 
 **Autori:** Klaus Dragjoshi
-**Lënda:** Informatikë / Fizikë Kompjutuerike
+
+**Lënda:** Modelim ne Fizike
 
 ---
 
