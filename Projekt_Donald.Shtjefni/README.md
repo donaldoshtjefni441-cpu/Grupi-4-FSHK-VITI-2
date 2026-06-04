@@ -35,3 +35,5 @@ figures/personalized_pagerank.png
 * NumPy
 * Matplotlib
 
+## Punoi:Donaldo Shtjefni
+
