@@ -37,5 +37,7 @@ dz/dt = b + z(x - c)
 ```bash
 pip install -r requirements.txt
 
+## Punoi: Erik Cupi
+
 
 
